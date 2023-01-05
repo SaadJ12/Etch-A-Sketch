@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.squarebox {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border-style: solid;
+    width: 450px;
+    height: 450px;
+}
+
+.smalldiv {
+    border-color: rgba(196, 195, 195, 0.6);
+    border-style: groove;
+}
