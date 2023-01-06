@@ -3,6 +3,11 @@ const container = document.createElement('div');
     container.className = "container";
     body.appendChild(container);
 
+const title = document.createElement('div');
+    title.className = "title";
+    container.appendChild(title);
+    title.innerText = "Etch a Sketch";
+
 const control = document.createElement('div');
     control.className = "control";
     container.appendChild(control);
