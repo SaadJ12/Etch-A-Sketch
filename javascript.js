@@ -13,6 +13,11 @@ const button = document.createElement('button');
     control.appendChild(button);
     button.innerText = "8×8";
     button.addEventListener('click', onclicking1);
+    button.addEventListener('click', toggleBigger);
+    function toggleBigger() {
+    const onbutton = document.querySelector('.squarebox');
+    onbutton.classList.toggle('bigger8by8');
+}
 
 const button2 = document.createElement('button');
     button2.className = "button2";
@@ -45,58 +50,61 @@ const button4 = document.createElement('button');
     function toggleBiggerClass3() {
     const onbutton4 = document.querySelector('.squarebox');
     onbutton4.classList.toggle('bigger64by64');
-    }        
+    }
+    
+const reset = document.createElement('button');
+    reset.className = "default";
+    control.appendChild(reset);
+    reset.innerText = "Reset";
+    reset.addEventListener('click', normal);
+    function normal() {
+    location.reload();
+    }
 
 const squarediv = document.createElement('div');
     squarediv.className = "squarebox";
-    container.appendChild(squarediv);    
+    container.appendChild(squarediv);
 
 function onclicking1() {
+    squarediv.innerHTML = "";
     for (let i=0; i<64; i++) {
         const smalldiv = document.createElement('div');
         smalldiv.className = "smalldiv";
         squarediv.appendChild(smalldiv);
         smalldiv.addEventListener('mouseover', function() {
-        smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.92)';
+        smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
     });
 }   }
 
 function onclicking2() {
+    squarediv.innerHTML = "";
     for(i=0; i<256; i++) {
-        const smalldiv = document.createElement('div');
-        smalldiv.className = "smalldiv";
-        squarediv.appendChild(smalldiv);
-        smalldiv.addEventListener('mouseover', function() {
-        smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.92)';
+    const smalldiv = document.createElement('div');
+    smalldiv.className = "smalldiv";
+    squarediv.appendChild(smalldiv);
+    smalldiv.addEventListener('mouseover', function() {
+    smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
     });
 }    }  
 
 function onclicking3() {
+    squarediv.innerHTML = "";
     for(i=0; i<1024; i++) {
     const smalldiv = document.createElement('div');
     smalldiv.className = "smalldiv";          
     squarediv.appendChild(smalldiv);
     smalldiv.addEventListener('mouseover', function() {
-    smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.92)';
+    smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
     });
-}
-}
+}   }
 
 function onclicking4() {
+    squarediv.innerHTML = "";
     for(i=0; i<4096; i++) {
     const smalldiv = document.createElement('div');
     smalldiv.className = "smalldiv";          
     squarediv.appendChild(smalldiv);
     smalldiv.addEventListener('mouseover', function() {
-    smalldiv.style.backgroundColor = 'black';
+    smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
     });
-}
-}
-
-// for (let i=0; i<256; i++) {
-//     const smalldiv = document.createElement('div');
-//     smalldiv.className = "smalldiv";
-//     squarediv.appendChild(smalldiv);
-//     smalldiv.addEventListener('mouseover', function() {
-//         smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.92)';
-//     });
+}   }
