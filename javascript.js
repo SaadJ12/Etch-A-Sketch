@@ -39,7 +39,13 @@ const button3 = document.createElement('button');
 const button4 = document.createElement('button');
     button4.className = "button4";
     control.appendChild(button4);
-    button4.innerText = "64×64";        
+    button4.innerText = "64×64";
+    button4.addEventListener('click', onclicking4);
+    button4.addEventListener('click', toggleBiggerClass3);
+    function toggleBiggerClass3() {
+    const onbutton4 = document.querySelector('.squarebox');
+    onbutton4.classList.toggle('bigger64by64');
+    }        
 
 const squarediv = document.createElement('div');
     squarediv.className = "squarebox";
@@ -76,7 +82,16 @@ function onclicking3() {
 }
 }
 
-
+function onclicking4() {
+    for(i=0; i<4096; i++) {
+    const smalldiv = document.createElement('div');
+    smalldiv.className = "smalldiv";          
+    squarediv.appendChild(smalldiv);
+    smalldiv.addEventListener('mouseover', function() {
+    smalldiv.style.backgroundColor = 'black';
+    });
+}
+}
 
 // for (let i=0; i<256; i++) {
 //     const smalldiv = document.createElement('div');
