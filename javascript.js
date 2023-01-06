@@ -3,9 +3,9 @@ const container = document.createElement('div');
     container.className = "container";
     body.appendChild(container);
 
-const title = document.createElement('div');
+    const title = document.createElement('div');
     title.className = "title";
-    container.appendChild(title);
+    body.appendChild(title);
     title.innerText = "Etch a Sketch";
 
 const control = document.createElement('div');
@@ -77,7 +77,7 @@ function onclicking1() {
         smalldiv.className = "smalldiv";
         squarediv.appendChild(smalldiv);
         smalldiv.addEventListener('mouseover', function() {
-        smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
+        smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.89)';
     });
 }   }
 
@@ -88,7 +88,7 @@ function onclicking2() {
     smalldiv.className = "smalldiv";
     squarediv.appendChild(smalldiv);
     smalldiv.addEventListener('mouseover', function() {
-    smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
+    smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.89)';
     });
 }    }  
 
@@ -99,7 +99,7 @@ function onclicking3() {
     smalldiv.className = "smalldiv";          
     squarediv.appendChild(smalldiv);
     smalldiv.addEventListener('mouseover', function() {
-    smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
+    smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.89)';
     });
 }   }
 
@@ -110,6 +110,6 @@ function onclicking4() {
     smalldiv.className = "smalldiv";          
     squarediv.appendChild(smalldiv);
     smalldiv.addEventListener('mouseover', function() {
-    smalldiv.style.backgroundColor = 'rgba(0, 0, 255, 0.733)';
+    smalldiv.style.backgroundColor = 'rgba(0, 0, 0, 0.89)';
     });
 }   }
